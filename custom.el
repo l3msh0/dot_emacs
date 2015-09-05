@@ -34,6 +34,7 @@
  '(initial-scratch-message nil)
  '(linum-format "%4d")
  '(make-backup-files nil)
+ '(ns-command-modifier (quote meta))
  '(org-return-follows-link t)
  '(tab-width 4)
  '(tramp-default-method "rsync")
