@@ -19,7 +19,11 @@
   ;; fonts
   (create-fontset-from-ascii-font "Migu 1M-20:weight=medium:slant=normal" nil "migu1m")
   (set-fontset-font "fontset-migu1m" 'unicode (font-spec :family "Migu 1M" ) nil 'append)
-  (add-to-list 'default-frame-alist '(font . "fontset-migu1m")))
+  (add-to-list 'default-frame-alist '(font . "fontset-migu1m"))
+  ;; path
+  (el-get-bundle! exec-path-from-shell)
+  (use-package exec-path-from-shell
+    :config (exec-path-from-shell-initialize)))
 
 ;; transparent
 (add-to-list 'default-frame-alist '(alpha . 93))
