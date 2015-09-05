@@ -15,6 +15,11 @@
 (el-get-bundle elpa:noctilux-theme)
 (load-theme 'wombat)
 
+(when (memq window-system '(mac ns))
+  ;; fonts
+  (create-fontset-from-ascii-font "Migu 1M-20:weight=medium:slant=normal" nil "migu1m")
+  (set-fontset-font "fontset-migu1m" 'unicode (font-spec :family "Migu 1M" ) nil 'append)
+  (add-to-list 'default-frame-alist '(font . "fontset-migu1m")))
 
 ;; transparent
 (add-to-list 'default-frame-alist '(alpha . 93))
