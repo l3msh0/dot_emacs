@@ -49,9 +49,6 @@
   (define-key web-mode-map (kbd "C-c C-v") 'browse-url-of-buffer)
   (define-key web-mode-map (kbd "C-;") 'helm-mini))
 
-(with-eval-after-load 'dired-x
-  (global-set-key (kbd "C-x C-j") 'skk-mode))
-
 ;;; helm
 (with-eval-after-load 'helm
   (define-key helm-map (kbd "C-h") 'delete-backward-char))

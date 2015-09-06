@@ -19,7 +19,8 @@
   (global-anzu-mode 1))
 
 (el-get-bundle ddskk)
-(use-package ddskk)
+(use-package ddskk
+  :bind ("C-x C-j" . skk-mode))
 
 (el-get-bundle smartrep)
 (use-package smartrep)
