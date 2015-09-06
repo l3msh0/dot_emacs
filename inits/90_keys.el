@@ -37,10 +37,6 @@
   (global-set-key (kbd "C-, r") 'helm-resume)
   (global-set-key (kbd "C-x c r") 'helm-resume))
 
-(with-eval-after-load 'helm-ag
-  (global-set-key (kbd "M-g .") 'helm-ag)
-  (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
-  (global-set-key (kbd "C-M-s") 'helm-ag-this-file))
 
 (with-eval-after-load 'helm-ls-git-ls
   (global-set-key (kbd "C-'") 'helm-ls-git-ls))

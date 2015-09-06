@@ -10,4 +10,7 @@
 
 (el-get-bundle helm-ag)
 (use-package helm-ag
-  :commands (helm-ag))
+  :bind ("M-g ." . helm-ag)
+  :commands (helm-ag)
+  :config
+  (bind-keys* ("M-g ," . helm-ag-pop-stack)))
