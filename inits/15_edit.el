@@ -32,6 +32,10 @@
 (use-package smex
   :bind ("M-x" . smex))
 
+(el-get-bundle highlight-symbol)
+(use-package highlight-symbol
+  :commands (highlight-symbol-mode))
+
 ;; copy buffer file name
 (defun my/copy-buffer-file-name ()
   "Copy buffer file name"
