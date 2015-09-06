@@ -41,9 +41,6 @@
 (with-eval-after-load 'helm-ls-git-ls
   (global-set-key (kbd "C-'") 'helm-ls-git-ls))
 
-(with-eval-after-load 'smex
-  (global-set-key (kbd "M-x") 'smex))
-
 (with-eval-after-load 'pop)
 (global-set-key (kbd "C-x l") 'popwin:display-last-buffer)
 (global-set-key (kbd "C-x p") 'popwin:stick-popup-window)
