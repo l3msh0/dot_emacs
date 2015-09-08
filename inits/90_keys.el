@@ -1,6 +1,6 @@
 (use-package bind-key
   :config
-  (bind-keys*
+  (bind-keys
    ("C-h" . delete-backward-char)
    ("<C-f12>" . my/switch-frame-tranparent)
    ("M-?" . help-for-help)

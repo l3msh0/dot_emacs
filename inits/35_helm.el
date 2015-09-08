@@ -6,7 +6,7 @@
 
 (el-get-bundle helm-ls-git)
 (use-package helm-ls-git
-  :commands (helm-ls-git-ls))
+  :bind ("C-'" . helm-ls-git-ls))
 
 (el-get-bundle helm-ag)
 (use-package helm-ag
