@@ -134,7 +134,12 @@
   (interactive)
   (call-interactively 'geben)
   (shell-command
-    (concat "XDEBUG_CONFIG='idekey=my-php-54' " php-executable " " (buffer-file-name) " &"))))
+   (concat "XDEBUG_CONFIG='idekey=my-php-54' " php-executable " " (buffer-file-name) " &"))))
+
+;;; JavaScript
+(el-get-bundle js2-mode)
+(use-package js2-mode
+  :mode (("\\.js$" . js2-mode)))
 
 ;;; Clojure
 (setq nrepl-hide-special-buffers t)
