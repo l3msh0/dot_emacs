@@ -47,7 +47,6 @@
         (kill-new buffer-file-name)
         (message buffer-file-name))
     (message "the buffer is not bound to any file")))
-(global-set-key (kbd "C-x y") 'my/copy-buffer-file-name)
 
 ;; kill word at point even if a cursor is not at the beginning
 (defun my/kill-word-at-point ()
