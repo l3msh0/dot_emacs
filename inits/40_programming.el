@@ -66,6 +66,10 @@
   (define-key sp-keymap (kbd "H-s j") 'sp-join-sexp)
   (define-key sp-keymap (kbd "H-s s") 'sp-split-sexp))
 
+;;; editorconfig
+(el-get-bundle editorconfig)
+(use-package editorconfig)
+
 ;;; web-mode
 (el-get-bundle web-mode)
 (el-get-bundle emmet-mode)
