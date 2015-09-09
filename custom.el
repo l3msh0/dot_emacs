@@ -36,6 +36,7 @@
  '(make-backup-files nil)
  '(ns-command-modifier (quote meta))
  '(org-return-follows-link t)
+ '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
  '(tramp-default-method "rsync")
  '(twittering-use-master-password t)
