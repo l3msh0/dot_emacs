@@ -173,9 +173,3 @@
 ;;; helm
 (with-eval-after-load 'helm
   (global-set-key (kbd "C-c ?") 'helm-descbinds))
-
-(global-set-key (kbd "M-.") 'helm-gtags-dwim)
-(global-set-key (kbd "M-*") 'helm-gtags-pop-stack)
-(key-chord-define-global "jt" 'helm-gtags-find-tag)
-(key-chord-define-global "jr" 'helm-gtags-find-rtag)
-(key-chord-define-global "js" 'helm-gtags-select)
