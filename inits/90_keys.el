@@ -102,7 +102,6 @@
 
 ;;; key-chord
 (key-chord-define-global "cj" 'org-clock-goto)
-(key-chord-define-global "js" (lambda () (interactive) (switch-to-buffer (get-buffer-create "*scratch*"))))
 (key-chord-define-global "fj" 'shell-pop)
 (key-chord-define-global "jd" 'dired-jump)
 (key-chord-define-global "jx" 'direx:jump-to-directory-other-window)
