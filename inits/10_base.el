@@ -71,4 +71,7 @@
 (setenv "TMPDIR" "/tmp")
 
 (use-package server
-  :init (server-start))
+  :init (server-start)
+  :config
+  (add-hook 'server-visit-hook
+            (function (lambda () (set-buffer-file-coding-system 'utf-8)))))
