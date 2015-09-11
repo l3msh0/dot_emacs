@@ -13,7 +13,9 @@
    ("C-r" . isearch-backward-regexp)
    ("C-x y" . my/copy-buffer-file-name)))
 
-(el-get-bundle key-chord
+(el-get-bundle key-chord)
+(use-package 'key-chord
+  :config
   (key-chord-mode 1)
   (setq key-chord-two-keys-delay 0.025))
 
