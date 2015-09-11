@@ -74,4 +74,6 @@
   :init (server-start)
   :config
   (add-hook 'server-visit-hook
-            (function (lambda () (set-buffer-file-coding-system 'utf-8)))))
+            (function (lambda ()
+                        (set-buffer-file-coding-system 'utf-8)
+                        (local-set-key (kbd "C-c C-c") 'server-edit)))))
