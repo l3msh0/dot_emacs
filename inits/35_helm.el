@@ -1,6 +1,7 @@
 (el-get-bundle helm)
 (use-package helm
-  :bind ("C-c ?" . helm-descbinds))
+  :bind (("C-c ?" . helm-descbinds)
+         ("C-;" . helm-mini)))
 
 (el-get-bundle helm-descbinds)
 (use-package helm-descbinds)
