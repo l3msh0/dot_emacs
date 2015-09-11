@@ -17,8 +17,8 @@
 (use-package 'key-chord
   :config
   (key-chord-mode 1)
-  (setq key-chord-two-keys-delay 0.025))
-
+  (setq key-chord-two-keys-delay 0.010))
+cha
 ;;; global
 
 (global-unset-key (kbd "C-\\"))
