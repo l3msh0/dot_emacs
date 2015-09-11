@@ -5,7 +5,9 @@
 (use-package dired
   :defer t
   :config
-  (bind-key "z" 'dired-zip-files dired-mode-map)
+  (bind-keys :map dired-mode-map
+             ("z" . dired-zip-files)
+             ("SPC" . my/dired-do-quicklook))
   (use-package dired-filter))
 
 (use-package dired-aux

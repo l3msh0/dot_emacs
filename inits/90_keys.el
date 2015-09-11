@@ -1,3 +1,18 @@
+(use-package bind-key
+  :config
+  (bind-keys
+   ("C-h" . delete-backward-char)
+   ("<C-f12>" . my/switch-frame-tranparent)
+   ("M-?" . help-for-help)
+   ("C-t" . other-window)
+   ("M-d" . my/kill-word-at-point)
+   ("C-x F" . find-function-other-window)
+   ("C-+" . text-scale-increase)
+   ("C--" . text-scale-decrease)
+   ("C-s" . isearch-forward-regexp)
+   ("C-r" . isearch-backward-regexp)
+   ("C-x y" . my/copy-buffer-file-name)))
+
 (el-get-bundle key-chord
   (key-chord-mode 1)
   (setq key-chord-two-keys-delay 0.025))
@@ -5,18 +20,6 @@
 ;;; global
 
 (global-unset-key (kbd "C-\\"))
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-?") 'help-for-help)
-(global-set-key (kbd "C-t") 'other-window)
-(global-set-key (kbd "M-d") 'kill-word-at-point)
-(global-set-key (kbd "C-m") 'newline-and-indent)
-(global-set-key (kbd "C-x F") 'find-function-other-window)
-
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
-
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
 
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
 
@@ -99,7 +102,6 @@
 
 ;;; key-chord
 (key-chord-define-global "cj" 'org-clock-goto)
-(key-chord-define-global "js" (lambda () (interactive) (switch-to-buffer (get-buffer-create "*scratch*"))))
 (key-chord-define-global "fj" 'shell-pop)
 (key-chord-define-global "jd" 'dired-jump)
 (key-chord-define-global "jx" 'direx:jump-to-directory-other-window)
@@ -161,10 +163,6 @@
 (with-eval-after-load 'clojure-mode
   (define-key clojure-mode-map (kbd "<C-return>") 'lisp-eval-last-sexp))
 
-;;; dired
-(with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "SPC") 'my/dired-do-quicklook))
-
 ;;; sp
 (with-eval-after-load 'smartparens
     (define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
@@ -174,9 +172,3 @@
 ;;; helm
 (with-eval-after-load 'helm
   (global-set-key (kbd "C-c ?") 'helm-descbinds))
-
-(global-set-key (kbd "M-.") 'helm-gtags-dwim)
-(global-set-key (kbd "M-*") 'helm-gtags-pop-stack)
-(key-chord-define-global "jt" 'helm-gtags-find-tag)
-(key-chord-define-global "jr" 'helm-gtags-find-rtag)
-(key-chord-define-global "js" 'helm-gtags-select)

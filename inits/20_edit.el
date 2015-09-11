@@ -36,14 +36,3 @@
 (el-get-bundle highlight-symbol)
 (use-package highlight-symbol
   :commands (highlight-symbol-mode))
-
-;; copy buffer file name
-(defun my/copy-buffer-file-name ()
-  "Copy buffer file name"
-  (interactive)
-  (if buffer-file-name
-      (progn
-        (kill-new buffer-file-name)
-        (message buffer-file-name))
-    (message "the buffer is not bound to any file")))
-(global-set-key (kbd "C-x y") 'my/copy-buffer-file-name)
