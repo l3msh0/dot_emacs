@@ -1,5 +1,6 @@
 (use-package org
   :commands (org-mode)
+  :bind (("C-c a" . org-agenda))
   :config
   (when (file-exists-p (expand-file-name "~/org"))
     (setq org-directory (expand-file-name "~/org")))
