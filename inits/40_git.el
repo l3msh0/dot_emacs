@@ -5,4 +5,5 @@
 
 (el-get-bundle magit)
 (use-package magit
-  :commands (magit-status))
+  :commands (magit-status)
+  :bind (("C-x v m" . magit-status)))
