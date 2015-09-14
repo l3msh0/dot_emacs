@@ -15,6 +15,8 @@
 
 (el-get-bundle anzu)
 (use-package anzu
+  :bind (("C-8" . anzu-query-replace-regexp)
+         ("C-*" . anzu-query-replace))
   :config
   (global-anzu-mode 1))
 

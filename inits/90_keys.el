@@ -16,11 +16,11 @@
    ("C-x y" . my/copy-buffer-file-name)))
 
 (el-get-bundle key-chord)
-(use-package 'key-chord
+(use-package key-chord
   :config
   (key-chord-mode 1)
   (setq key-chord-two-keys-delay 0.010))
-cha
+
 ;;; global
 
 (global-unset-key (kbd "C-\\"))
@@ -30,9 +30,6 @@ cha
 (with-eval-after-load 'git-gutter
   (global-set-key (kbd "C-x g n") 'git-gutter:next-diff)
   (global-set-key (kbd "C-x g p") 'git-gutter:previous-diff))
-
-(global-set-key (kbd "C-x v m") 'magit-status)
-
 
 (with-eval-after-load 'pop)
 (global-set-key (kbd "C-x l") 'popwin:display-last-buffer)
@@ -133,8 +130,6 @@ cha
 
 (eval-after-load 'anzu
   '(progn
-     (global-set-key (kbd "C-8") 'anzu-query-replace-regexp)
-     (global-set-key (kbd "C-*") 'anzu-query-replace)
      (key-chord-define-global "r." 'anzu-query-replace-at-cursor-thing)))
 
 (key-chord-define-global "g." 'ag)
