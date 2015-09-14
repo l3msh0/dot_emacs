@@ -42,6 +42,10 @@
  '(tab-width 4)
  '(tramp-default-method "rsync")
  '(twittering-use-master-password t)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2)
+ '(web-mode-sql-indent-offset 2)
  '(whitespace-style (quote (face trailing tabs tab-mark))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
