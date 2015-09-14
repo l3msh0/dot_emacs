@@ -122,12 +122,6 @@
      (define-key twittering-mode-map (kbd "M-n") 'twittering-switch-to-next-timeline)
      (define-key twittering-mode-map (kbd "M-p") 'twittering-switch-to-previous-timeline)))
 
-(eval-after-load 'emmet-mode
-  '(progn
-     (define-key emmet-mode-keymap (kbd "C-j") nil)
-     (define-key emmet-mode-keymap (kbd "C-RET") nil)
-     (define-key emmet-mode-keymap (kbd "M-RET") 'emmet-expand-line)))
-
 (eval-after-load 'anzu
   '(progn
      (key-chord-define-global "r." 'anzu-query-replace-at-cursor-thing)))

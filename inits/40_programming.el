@@ -77,10 +77,10 @@
   :mode (("\\.html\\'" . web-mode))
   :config
   (bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map)
-  ;; emmet-mode
-  (use-package emmet
+  (use-package emmet-mode
     :config
-    (add-hook 'web-mode-hook 'emmet-mode)))
+    (add-hook 'web-mode-hook 'emmet-mode)
+    (bind-key "M-RET" 'emmet-expand-line emmet-mode-keymap)))
 
 ;;; yasnippet
 (el-get-bundle yasnippet)
