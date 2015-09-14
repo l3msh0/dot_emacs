@@ -76,6 +76,7 @@
 (use-package web-mode
   :mode (("\\.html\\'" . web-mode))
   :config
+  (bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map)
   ;; emmet-mode
   (use-package emmet
     :config

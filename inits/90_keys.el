@@ -1,5 +1,7 @@
 (use-package bind-key
   :config
+  (bind-keys*
+   ("C-;" . helm-mini))
   (bind-keys
    ("C-h" . delete-backward-char)
    ("<C-f12>" . my/switch-frame-tranparent)
@@ -31,34 +33,11 @@ cha
 
 (global-set-key (kbd "C-x v m") 'magit-status)
 
-(with-eval-after-load 'org
-  (global-set-key (kbd "C-c r") 'org-capture)
-  (global-set-key (kbd "C-c a") 'org-agenda))
-
-(with-eval-after-load 'helm
-  (global-set-key (kbd "C-;") 'helm-mini)
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-  (global-set-key (kbd "C-c i") 'helm-imenu)
-  (global-set-key (kbd "C-, r") 'helm-resume)
-  (global-set-key (kbd "C-x c r") 'helm-resume))
-
-
-(with-eval-after-load 'helm-ls-git-ls
-  (global-set-key (kbd "C-'") 'helm-ls-git-ls))
 
 (with-eval-after-load 'pop)
 (global-set-key (kbd "C-x l") 'popwin:display-last-buffer)
 (global-set-key (kbd "C-x p") 'popwin:stick-popup-window)
 
-(with-eval-after-load 'web-mode
-  (define-key web-mode-map (kbd "C-c C-v") 'browse-url-of-buffer)
-  (define-key web-mode-map (kbd "C-;") 'helm-mini))
-
-;;; helm
-(with-eval-after-load 'helm
-  (define-key helm-map (kbd "C-h") 'delete-backward-char))
-(with-eval-after-load 'helm-files
-  (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char))
 
 ;;; emacs-lisp-mode
 (define-key emacs-lisp-mode-map (kbd "C-c C-d") 'lispxmp)

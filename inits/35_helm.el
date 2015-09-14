@@ -1,7 +1,17 @@
 (el-get-bundle helm)
 (use-package helm
+  :commands (helm-mini)
   :bind (("C-c ?" . helm-descbinds)
-         ("C-;" . helm-mini)))
+         ("C-c i" . helm-imenu)
+         ("M-y" . helm-show-kill-ring)
+         ("C-, r" . helm-resume))
+  :config
+  (bind-key "C-h" 'delete-backward-char helm-map))
+
+(use-package helm-files
+  :defer t
+  :config
+  (bind-key "C-h" 'delete-backward-char helm-find-files-map))
 
 (el-get-bundle helm-descbinds)
 (use-package helm-descbinds)
