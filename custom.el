@@ -49,7 +49,10 @@
  '(web-mode-script-padding 2)
  '(web-mode-sql-indent-offset 2)
  '(web-mode-style-padding 2)
- '(whitespace-style (quote (face trailing tabs tab-mark))))
+ '(whitespace-style (quote (face trailing tabs tab-mark)))
+ '(yas-prompt-functions
+   (quote
+    (my/yas-helm-prompt yas-x-prompt yas-dropdown-prompt yas-completing-prompt yas-ido-prompt yas-no-prompt))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
