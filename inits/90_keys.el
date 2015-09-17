@@ -19,7 +19,7 @@
 (use-package key-chord
   :config
   (key-chord-mode 1)
-  (setq key-chord-two-keys-delay 0.010))
+  (setq key-chord-two-keys-delay 0.03))
 
 ;;; global
 
