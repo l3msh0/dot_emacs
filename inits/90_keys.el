@@ -93,6 +93,7 @@
 (key-chord-define-global "gl" 'helm-ls-git-ls)
 (key-chord-define-global "gn" 'git-gutter:next-hunk)
 (key-chord-define-global "gp" 'git-gutter:previous-hunk)
+(key-chord-define-global "pr" 'helm-apropos)
 
 (key-chord-define-global "jw" 'ace-jump-word-mode)
 (key-chord-define-global "jc" 'ace-jump-char-mode)
