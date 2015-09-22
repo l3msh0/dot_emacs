@@ -38,6 +38,9 @@
  '(make-backup-files nil)
  '(ns-command-modifier (quote meta))
  '(org-return-follows-link t)
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
  '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
  '(tramp-default-method "rsync")
