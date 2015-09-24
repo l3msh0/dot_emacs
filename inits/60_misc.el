@@ -5,3 +5,7 @@
 (el-get-bundle restclient)
 (use-package restclient
   :commands (restclient))
+
+;; Libraries
+(el-get-bundle deferred)
+(el-get-bundle json)
