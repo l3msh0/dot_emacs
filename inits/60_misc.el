@@ -21,5 +21,7 @@
 
 (add-hook 'markdown-mode-hook 'orgtbl-mode)
 (add-hook 'markdown-mode-hook
-          (lambda()
-            (add-hook 'before-save-hook 'cleanup-org-tables  nil 'make-it-local)))
+          (lambda ()
+            (interactive)
+            (add-hook 'before-save-hook 'cleanup-org-tables  nil 'make-it-local)
+            (remove-hook 'before-save-hook 'delete-trailing-whitespace)))
