@@ -29,6 +29,7 @@
  '(eshell-scroll-show-maximum-output nil)
  '(flycheck-completion-system (quote ido))
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
+ '(helm-img-thumbnail-height 200)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
