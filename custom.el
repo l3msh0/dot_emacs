@@ -37,6 +37,9 @@
  '(magit-branch-arguments (quote ("--no-track")))
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
+ '(migemo-coding-system (quote utf-8-unix))
+ '(migemo-command "cmigemo")
+ '(migemo-options (quote ("-q" "--emacs")))
  '(ns-command-modifier (quote meta))
  '(org-return-follows-link t)
  '(org-todo-keywords
