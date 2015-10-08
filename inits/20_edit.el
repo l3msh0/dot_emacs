@@ -42,6 +42,6 @@
 (el-get-bundle migemo)
 (use-package migemo
   :config
-  (migemo-init)
   ;; Remember to place symbolic link!!
-  (setq migemo-dictionary (concat user-emacs-directory "migemo/utf-8/migemo-dict")))
+  (setq migemo-dictionary (concat user-emacs-directory "migemo/utf-8/migemo-dict"))
+  (migemo-init))
