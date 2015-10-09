@@ -8,7 +8,7 @@
 
 ;; Libraries
 (el-get-bundle deferred)
-(el-get-bundle json)
+;(el-get-bundle json)
 
 
 (require 'org-table)
