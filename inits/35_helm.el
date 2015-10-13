@@ -6,7 +6,8 @@
          ("M-y" . helm-show-kill-ring)
          ("C-, r" . helm-resume))
   :config
-  (bind-key "C-h" 'delete-backward-char helm-map))
+  (bind-key "C-h" 'delete-backward-char helm-map)
+  (key-chord-define-global "bm" 'helm-bookmarks))
 
 (use-package helm-files
   :defer t
