@@ -41,6 +41,7 @@
  '(migemo-command "cmigemo")
  '(migemo-options (quote ("-q" "--emacs")))
  '(ns-command-modifier (quote meta))
+ '(open-junk-file-format "~/Google ドライブ/junk/%Y/%m/%d-%H%M%S." t)
  '(org-return-follows-link t)
  '(org-todo-keywords
    (quote
