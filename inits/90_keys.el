@@ -28,8 +28,8 @@
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
 
 (with-eval-after-load 'git-gutter
-  (global-set-key (kbd "C-x g n") 'git-gutter:next-diff)
-  (global-set-key (kbd "C-x g p") 'git-gutter:previous-diff))
+  (global-set-key (kbd "C-x g n") 'git-gutter:next-hunk)
+  (global-set-key (kbd "C-x g p") 'git-gutter:previous-hunk))
 
 (with-eval-after-load 'pop)
 (global-set-key (kbd "C-x l") 'popwin:display-last-buffer)
