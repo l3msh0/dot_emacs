@@ -2,6 +2,10 @@
 (use-package markdown-mode
   :mode "\\.md\\'")
 
+(el-get-bundle yaml-mode)
+(use-package yaml-mode
+  :mode ("\\.yml\\'" "\\.yaml\\'"))
+
 (el-get-bundle restclient)
 (use-package restclient
   :commands (restclient))
