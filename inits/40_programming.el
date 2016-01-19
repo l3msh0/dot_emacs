@@ -158,7 +158,9 @@
 ;;; Golang
 (el-get-bundle go-mode)
 (use-package go-mode
-  :mode (("\\.go$" . go-mode)))
+  :mode (("\\.go$" . go-mode))
+  :config
+  (bind-key "M-." 'godef-jump go-mode-map))
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)
