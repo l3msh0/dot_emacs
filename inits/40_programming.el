@@ -155,5 +155,10 @@
   (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
   (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
 
+;;; Golang
+(el-get-bundle go-mode)
+(use-package go-mode
+  :mode (("\\.go$" . go-mode)))
+
 (el-get-bundle lispxmp)
 (use-package lispxmp)
