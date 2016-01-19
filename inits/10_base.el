@@ -35,7 +35,7 @@
 ;; built-in minor-mode
 (global-hl-line-mode 1)
 (column-number-mode 1)
-(line-number-mode 0)
+(line-number-mode 1)
 (scroll-bar-mode 0)
 (show-paren-mode 1)
 (global-whitespace-mode 1)
