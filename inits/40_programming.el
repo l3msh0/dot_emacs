@@ -158,7 +158,17 @@
 ;;; Golang
 (el-get-bundle go-mode)
 (use-package go-mode
-  :mode (("\\.go$" . go-mode)))
+  :mode (("\\.go$" . go-mode))
+  :config
+  (add-hook 'go-mode-hook 'flycheck-mode))
+
+(el-get-bundle go-autocomplete)
+(use-package go-autocomplete)
+
+(el-get-bundle go-eldoc)
+(use-package go-eldoc
+  :config
+  (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)

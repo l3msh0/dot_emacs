@@ -23,7 +23,9 @@
   ;; path
   (el-get-bundle! exec-path-from-shell)
   (use-package exec-path-from-shell
-    :config (exec-path-from-shell-initialize)))
+    :config
+    (let ((envs '("PATH" "GOPATH")))
+      (exec-path-from-shell-copy-envs envs))))
 
 ;; transparent
 (add-to-list 'default-frame-alist '(alpha . 93))
