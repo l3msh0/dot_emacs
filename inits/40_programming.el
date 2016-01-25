@@ -1,6 +1,6 @@
 ;;; General
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook 'eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
 ;;; flycheck
@@ -180,7 +180,8 @@
   (add-hook 'csharp-mode-hook
             (lambda ()
               (flycheck-mode 1)
-              (omnisharp-mode 1)))
+              (omnisharp-mode 1)
+              (eldoc-mode 1)))
   (bind-keys :map csharp-mode-map
              ("C-c C-j" . omnisharp-go-to-definition)
              ("C-c C-8" . pop-tag-mark)))
