@@ -180,7 +180,10 @@
   (add-hook 'csharp-mode-hook
             (lambda ()
               (flycheck-mode 1)
-              (omnisharp-mode 1))))
+              (omnisharp-mode 1)))
+  (bind-keys :map csharp-mode-map
+             ("C-c C-j" . omnisharp-go-to-definition)
+             ("C-c C-8" . pop-tag-mark)))
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)
