@@ -170,5 +170,17 @@
   :config
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
+;;; C#
+(el-get-bundle csharp-mode)
+(el-get-bundle omnisharp-mode)
+(use-package csharp-mode
+  :mode (("\\.cs$" . csharp-mode))
+  :config
+  (use-package omnisharp)
+  (add-hook 'csharp-mode-hook
+            (lambda ()
+              (flycheck-mode 1)
+              (omnisharp-mode 1))))
+
 (el-get-bundle lispxmp)
 (use-package lispxmp)
