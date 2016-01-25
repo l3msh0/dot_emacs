@@ -11,6 +11,7 @@
  '(anzu-deactivate-region t)
  '(anzu-mode-lighter "")
  '(anzu-search-threshold 1000)
+ '(c-basic-offset 4)
  '(case-fold-search t)
  '(cua-enable-cua-keys nil)
  '(custom-safe-themes
