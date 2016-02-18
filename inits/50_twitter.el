@@ -4,7 +4,7 @@
   :config
   (add-hook 'twittering-mode-hook
             (lambda ()
-              (twittering-icon-mode 1)))
+              (twittering-icon-mode 0)))
   (fmakunbound 'twittering-update-lambda)
   (fmakunbound 'twittering-jojo-mode)
   (bind-keys :map twittering-mode-map
