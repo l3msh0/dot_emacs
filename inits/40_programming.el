@@ -74,7 +74,7 @@
 (el-get-bundle web-mode)
 (el-get-bundle emmet-mode)
 (use-package web-mode
-  :mode (("\\.html\\'" . web-mode))
+  :mode ("\\.html\\'" . web-mode)
   :config
   (bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map)
   (use-package emmet-mode
@@ -92,7 +92,7 @@
 (el-get-bundle auto-complete)
 (use-package auto-complete
   :config
-  (global-auto-composition-mode 1)
+  (global-auto-complete-mode 1)
   (ac-config-default)
 
   ;;; advice for whitespace-mode conflict
@@ -119,7 +119,7 @@
 (el-get-bundle php-mode)
 (el-get-bundle php-eldoc)
 (use-package php-mode
-  :mode (("\\.php$" . php-mode))
+  :mode ("\\.php$" . php-mode)
   :config
   (use-package php-eldoc)
   (defun my-php-mode-hook ()
@@ -144,7 +144,7 @@
 ;;; JavaScript
 (el-get-bundle js2-mode)
 (use-package js2-mode
-  :mode (("\\.js$" . js2-mode)))
+  :mode ("\\.js$" . js2-mode))
 
 ;;; Clojure
 (setq nrepl-hide-special-buffers t)
@@ -158,8 +158,8 @@
 ;;; Golang
 (el-get-bundle go-mode)
 (use-package go-mode
-  :mode (("\\.go$" . go-mode))
-  :config
+  :mode ("\\.go\\'" . go-mode)
+  :init
   (add-hook 'go-mode-hook 'flycheck-mode))
 
 (el-get-bundle go-autocomplete)
@@ -167,24 +167,26 @@
 
 (el-get-bundle go-eldoc)
 (use-package go-eldoc
-  :config
+  :commands go-eldoc-setup
+  :init
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 ;;; C#
 (el-get-bundle csharp-mode)
 (el-get-bundle omnisharp-mode)
+(use-package omnisharp)
 (use-package csharp-mode
-  :mode (("\\.cs$" . csharp-mode))
+  :mode ("\\.cs$" . csharp-mode)
   :config
-  (use-package omnisharp)
   (add-hook 'csharp-mode-hook
             (lambda ()
-              (flycheck-mode 1)
               (omnisharp-mode 1)
+              (flycheck-mode 1)
               (eldoc-mode 1)))
   (bind-keys :map csharp-mode-map
              ("C-c C-j" . omnisharp-go-to-definition)
-             ("C-c C-8" . pop-tag-mark)))
+             ("C-c C-8" . pop-tag-mark)
+             ("M-/" . omnisharp-auto-complete)))
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)
