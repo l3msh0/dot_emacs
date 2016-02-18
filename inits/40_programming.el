@@ -171,6 +171,10 @@
   :init
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
+(el-get-bundle go-rename)
+(use-package go-rename
+  :commands go-rename)
+
 ;;; C#
 (el-get-bundle csharp-mode)
 (el-get-bundle omnisharp-mode)
