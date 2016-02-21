@@ -48,6 +48,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
+ '(ruby-insert-encoding-magic-comment nil)
  '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
  '(tramp-default-method "rsync")
