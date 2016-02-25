@@ -37,7 +37,9 @@
 
 (el-get-bundle highlight-symbol)
 (use-package highlight-symbol
-  :commands (highlight-symbol-mode))
+  :commands (highlight-symbol-mode)
+  :config
+  (add-hook 'find-file-hook 'highlight-symbol-mode)
 
 (el-get-bundle migemo)
 (use-package migemo

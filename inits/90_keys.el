@@ -86,7 +86,7 @@
 (key-chord-define-global "mw" 'my/mirror-window)
 (key-chord-define-global "mt" 'my/transpose-buffers)
 (key-chord-define-global "jw" 'double-dired)
-(key-chord-define-global "hr" 'helm-resume)
+(key-chord-define-global "hr" 'highlight-symbol-query-replace)
 (key-chord-define-global "hm" 'helm-mini)
 (key-chord-define-global "d." 'my/kill-enclosed-object)
 (key-chord-define-global "vm" 'view-mode)

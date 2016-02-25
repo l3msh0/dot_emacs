@@ -31,6 +31,8 @@
  '(flycheck-completion-system (quote ido))
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
  '(helm-img-thumbnail-height 200)
+ '(highlight-symbol-idle-delay 0.7)
+ '(highlight-symbol-on-navigation-p t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
