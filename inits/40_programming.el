@@ -173,7 +173,9 @@
 
 (el-get-bundle go-rename)
 (use-package go-rename
-  :commands go-rename)
+  :commands go-rename
+  :init
+  (key-chord-define go-mode-map "gn" 'go-rename))
 
 ;;; C#
 (el-get-bundle csharp-mode)
