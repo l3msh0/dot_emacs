@@ -9,4 +9,5 @@
   ;; Set task name on frame title when clock-in
   (add-hook 'org-clock-in-hook (lambda () (setq frame-title-format  '("*** " org-clock-heading " ***"))))
   (add-hook 'org-clock-out-hook (lambda () (setq frame-title-format "%b")))
-  (add-hook 'org-mode-hook 'org-indent-mode))
+  (add-hook 'org-mode-hook 'org-indent-mode)
+  (key-chord-define org-mode-map "sl" 'org-store-link))

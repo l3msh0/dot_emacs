@@ -81,3 +81,9 @@
             (function (lambda ()
                         (set-buffer-file-coding-system 'utf-8)
                         (local-set-key (kbd "C-c C-c") 'server-edit)))))
+
+(el-get-bundle key-chord)
+(use-package key-chord
+  :config
+  (key-chord-mode 1)
+  (setq key-chord-two-keys-delay 0.03))
