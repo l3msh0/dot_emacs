@@ -8,7 +8,8 @@
 
 (el-get-bundle restclient)
 (use-package restclient
-  :commands (restclient))
+  :commands (restclient)
+  :mode ("\\.rest\\'" . restclient-mode))
 
 ;; Libraries
 (el-get-bundle deferred)
