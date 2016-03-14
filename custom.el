@@ -57,7 +57,7 @@
  '(twittering-convert-fix-size 32)
  '(twittering-default-show-replied-tweets 3)
  '(twittering-status-format "%i %p%s %t %@%R")
- '(twittering-timer-interval 120)
+ '(twittering-timer-interval 180)
  '(twittering-use-master-password t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
