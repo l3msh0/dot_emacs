@@ -7,7 +7,10 @@
          ("C-, r" . helm-resume))
   :config
   (bind-key "C-h" 'delete-backward-char helm-map)
-  (key-chord-define-global "bm" 'helm-bookmarks))
+  (key-chord-define-global "bm" 'helm-bookmarks)
+  (add-to-list 'helm-completing-read-handlers-alist '(dired-do-copy . nil))
+  (add-to-list 'helm-completing-read-handlers-alist '(dired-do-rename . nil))
+  (add-to-list 'helm-completing-read-handlers-alist '(dired-create-directory . nil)))
 
 (use-package helm-files
   :defer t
