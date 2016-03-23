@@ -23,7 +23,7 @@
 ;;; init-loader
 (el-get-bundle! emacs-jp/init-loader
   ;; load
-  (setq-default init-loader-show-log-after-init nil
+  (setq-default init-loader-show-log-after-init 'error-only
                 init-loader-byte-compile nil)
   (init-loader-load (locate-user-emacs-file "inits"))
   ;; hide compilation results
