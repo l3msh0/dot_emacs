@@ -32,7 +32,8 @@
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
  '(helm-completing-read-handlers-alist
    (quote
-    ((dired-create-directory)
+    ((find-file)
+     (dired-create-directory)
      (dired-do-rename)
      (dired-do-copy)
      (describe-function . helm-completing-read-symbols)
@@ -44,16 +45,13 @@
      (trace-function-background . helm-completing-read-symbols)
      (find-tag . helm-completing-read-with-cands-in-buffer)
      (ffap-alternate-file)
-     (tmm-menubar)
-     (org-set-tags-command)
-     (helm-ag))))
+     (tmm-menubar))))
  '(helm-img-thumbnail-height 200)
  '(highlight-symbol-idle-delay 0.7)
  '(highlight-symbol-on-navigation-p t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
- '(js2-basic-offset 2)
  '(linum-format "%4d")
  '(magit-branch-arguments (quote ("--no-track")))
  '(magit-push-always-verify nil)
@@ -68,6 +66,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
+ '(package-selected-packages (quote (queue noctilux-theme)))
  '(ruby-insert-encoding-magic-comment nil)
  '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
