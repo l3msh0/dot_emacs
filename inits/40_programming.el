@@ -86,7 +86,8 @@
 (el-get-bundle yasnippet)
 (use-package yasnippet
   :config
-  (yas-global-mode 1))
+  (yas-global-mode 1)
+  (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "site-lisp/snippets")))
 
 ;;; auto-complete
 (el-get-bundle auto-complete)
