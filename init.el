@@ -1,4 +1,11 @@
 ;; see http://d.hatena.ne.jp/tarao/20150221/1424518030#tips-isolated-setup
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;(package-initialize)
+
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name))
   (setq custom-file (concat user-emacs-directory "custom.el"))
