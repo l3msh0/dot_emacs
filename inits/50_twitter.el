@@ -11,4 +11,5 @@
   (bind-keys :map twittering-mode-map
              ("f" . twittering-switch-to-next-timeline)
              ("b" . twittering-switch-to-previous-timeline)
-             ("F" . twittering-favorite)))
+             ("F" . twittering-favorite))
+  (bind-key "C-, t" 'twittering-update-status-interactive))
