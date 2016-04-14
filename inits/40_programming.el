@@ -196,3 +196,9 @@
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)
+
+;;; Haml
+
+(el-get-bundle haml-mode)
+(use-package haml-mode
+  :mode ("\\.haml\\'" . haml-mode))
