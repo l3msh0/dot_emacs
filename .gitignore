@@ -1,4 +1,5 @@
 24.*
+25.*
 /ac-comphist.dat
 auto-save-list/
 /places
@@ -11,3 +12,6 @@ geben/
 image-dired/
 session.*
 /migemo
+/bookmarks
+/*.data
+/site-lisp
