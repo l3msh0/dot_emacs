@@ -145,7 +145,11 @@
 ;;; JavaScript
 (el-get-bundle js2-mode)
 (use-package js2-mode
-  :mode ("\\.js$" . js2-mode))
+  :mode ("\\.js\\'" . js2-mode))
+
+(el-get-bundle coffee-mode)
+(use-package coffee-mode
+  :mode ("\\.coffee\\'" . coffee-mode))
 
 ;;; Clojure
 (setq nrepl-hide-special-buffers t)
