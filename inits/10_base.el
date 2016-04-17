@@ -28,9 +28,6 @@
     (let ((envs '("PATH" "GOPATH")))
       (exec-path-from-shell-copy-envs envs))))
 
-;; transparent
-(add-to-list 'default-frame-alist '(alpha . 93))
-
 ;; variables
 (setq-default indent-line-function 'indent-relative-maybe)
 
