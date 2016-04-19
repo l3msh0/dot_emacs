@@ -87,7 +87,7 @@
 (use-package yasnippet
   :config
   (yas-global-mode 1)
-  (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "site-lisp/snippets")))
+  (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "site-lisp/snippets") t))
 
 ;;; auto-complete
 (el-get-bundle auto-complete)
@@ -165,7 +165,11 @@
 (use-package go-mode
   :mode ("\\.go\\'" . go-mode)
   :init
-  (add-hook 'go-mode-hook 'flycheck-mode))
+  (add-hook 'go-mode-hook 'flycheck-mode)
+  (add-hook 'go-mode-hook (lambda () (interactive)
+                            (setq ac-sources '(ac-source-go ac-source-yasnippet))))
+  (add-hook 'before-save-hook (lambda () (interactive)
+                                (when (eq major-mode 'go-mode) (gofmt)))))
 
 (el-get-bundle go-autocomplete)
 (use-package go-autocomplete)
