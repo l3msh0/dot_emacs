@@ -11,8 +11,6 @@
    ("C-x F" . find-function-other-window)
    ("C-+" . text-scale-increase)
    ("C--" . text-scale-decrease)
-   ("C-s" . isearch-forward-regexp)
-   ("C-r" . isearch-backward-regexp)
    ("C-x y" . my/copy-buffer-file-name)))
 
 ;;; global

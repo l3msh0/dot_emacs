@@ -37,3 +37,11 @@
   (key-chord-define-global "jt" 'helm-gtags-find-tag)
   (key-chord-define-global "jr" 'helm-gtags-find-rtag)
   (key-chord-define-global "js" 'helm-gtags-select))
+
+(el-get-bundle helm-migemo)
+(use-package helm-migemo)
+
+(el-get-bundle ace-isearch)
+(use-package ace-isearch
+  :config
+  (global-ace-isearch-mode 1))
