@@ -1,6 +1,14 @@
 (el-get-bundle markdown-mode)
 (use-package markdown-mode
-  :mode "\\.md\\'")
+  :mode "\\.md\\'"
+  :config
+  (bind-key "C-x m" (lambda () (interactive) (start-process "Marked" nil "/Applications/Marked.app/Contents/MacOS/Marked" (buffer-file-name)) markdown-mode-map))
+  (add-hook 'markdown-mode-hook 'orgtbl-mode)
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (interactive)
+              (add-hook 'before-save-hook 'cleanup-org-tables  nil 'make-it-local)
+              (remove-hook 'before-save-hook 'delete-trailing-whitespace))))
 
 (el-get-bundle yaml-mode)
 (use-package yaml-mode
@@ -23,10 +31,3 @@
     (goto-char (point-min))
     (while (search-forward "-+-" nil t) (replace-match "-|-"))
     ))
-
-(add-hook 'markdown-mode-hook 'orgtbl-mode)
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            (interactive)
-            (add-hook 'before-save-hook 'cleanup-org-tables  nil 'make-it-local)
-            (remove-hook 'before-save-hook 'delete-trailing-whitespace)))
