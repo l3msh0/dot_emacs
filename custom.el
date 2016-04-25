@@ -30,6 +30,7 @@
  '(eshell-scroll-show-maximum-output nil)
  '(flycheck-completion-system (quote ido))
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
+ '(gofmt-command "goimports")
  '(helm-completing-read-handlers-alist
    (quote
     ((find-file)
