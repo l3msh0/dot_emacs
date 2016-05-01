@@ -30,7 +30,6 @@
  '(eshell-scroll-show-maximum-output nil)
  '(flycheck-completion-system (quote ido))
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
- '(gofmt-command "goimports")
  '(helm-completing-read-handlers-alist
    (quote
     ((find-file)
@@ -46,7 +45,8 @@
      (trace-function-background . helm-completing-read-symbols)
      (find-tag . helm-completing-read-with-cands-in-buffer)
      (ffap-alternate-file)
-     (tmm-menubar))))
+     (tmm-menubar)
+     (helm-ag))))
  '(helm-img-thumbnail-height 200)
  '(highlight-symbol-idle-delay 0.7)
  '(highlight-symbol-on-navigation-p t)
