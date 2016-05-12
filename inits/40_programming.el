@@ -5,6 +5,9 @@
 
 ;;; flycheck
 (el-get-bundle flycheck)
+(use-package flychech
+  :config
+  (key-chord-define flycheck-mode-map "bf" 'flycheck-buffer))
 
 ;;; smartparens
 (el-get-bundle smartparens)
