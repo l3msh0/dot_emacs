@@ -13,6 +13,7 @@
  '(anzu-search-threshold 1000)
  '(c-basic-offset 4)
  '(case-fold-search t)
+ '(coffee-tab-width 2)
  '(cua-enable-cua-keys nil)
  '(custom-safe-themes
    (quote

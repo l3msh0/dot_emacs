@@ -31,3 +31,9 @@
     (goto-char (point-min))
     (while (search-forward "-+-" nil t) (replace-match "-|-"))
     ))
+
+(el-get-bundle pomodoro)
+(use-package pomodoro
+  :commands (pomodoro:start)
+  :config
+  (setq pomodoro:file (expand-file-name "~/Google ドライブ/org/daily.org"))))

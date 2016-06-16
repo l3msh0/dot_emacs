@@ -133,18 +133,6 @@
     (highlight-symbol-mode 1))
   (add-hook 'php-mode-hook 'my-php-mode-hook))
 
-
-(el-get-bundle geben)
-(use-package geben
-  :commands (geben)
-  :config
-  (defun my-php-debug ()
-  "Run current PHP script for debugging with geben"
-  (interactive)
-  (call-interactively 'geben)
-  (shell-command
-   (concat "XDEBUG_CONFIG='idekey=my-php-54' " php-executable " " (buffer-file-name) " &"))))
-
 ;;; JavaScript
 (el-get-bundle js2-mode)
 (use-package js2-mode
@@ -154,57 +142,40 @@
 (use-package coffee-mode
   :mode ("\\.coffee\\'" . coffee-mode))
 
-;;; Clojure
-(setq nrepl-hide-special-buffers t)
-(el-get-bundle cider)
-(use-package cider
-  :config
-  (add-hook 'clojure-mode-hook 'cider-mode)
-  (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-  (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
+;; ;;; Clojure
+;; (setq nrepl-hide-special-buffers t)
+;; (el-get-bundle cider)
+;; (use-package cider
+;;   :config
+;;   (add-hook 'clojure-mode-hook 'cider-mode)
+;;   (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;;   (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
 
 ;;; Golang
-(el-get-bundle go-mode)
-(use-package go-mode
-  :mode ("\\.go\\'" . go-mode)
-  :init
-  (add-hook 'go-mode-hook 'flycheck-mode)
-  (add-hook 'go-mode-hook (lambda () (interactive)
-                            (setq ac-sources '(ac-source-go ac-source-yasnippet))))
-  (add-hook 'before-save-hook (lambda () (interactive)
-                                (when (eq major-mode 'go-mode) (gofmt)))))
+;; (el-get-bundle go-mode)
+;; (use-package go-mode
+;;   :mode ("\\.go\\'" . go-mode)
+;;   :init
+;;   (add-hook 'go-mode-hook 'flycheck-mode)
+;;   (add-hook 'go-mode-hook (lambda () (interactive)
+;;                             (setq ac-sources '(ac-source-go ac-source-yasnippet))))
+;;   (add-hook 'before-save-hook (lambda () (interactive)
+;;                                 (when (eq major-mode 'go-mode) (gofmt)))))
 
-(el-get-bundle go-autocomplete)
-(use-package go-autocomplete)
+;; (el-get-bundle go-autocomplete)
+;; (use-package go-autocomplete)
 
-(el-get-bundle go-eldoc)
-(use-package go-eldoc
-  :commands go-eldoc-setup
-  :init
-  (add-hook 'go-mode-hook 'go-eldoc-setup))
+;; (el-get-bundle go-eldoc)
+;; (use-package go-eldoc
+;;   :commands go-eldoc-setup
+;;   :init
+;;   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
-(el-get-bundle go-rename)
-(use-package go-rename
-  :commands go-rename
-  :init
-  (key-chord-define go-mode-map "gn" 'go-rename))
-
-;;; C#
-(el-get-bundle csharp-mode)
-(el-get-bundle omnisharp-mode)
-(use-package omnisharp)
-(use-package csharp-mode
-  :mode ("\\.cs$" . csharp-mode)
-  :config
-  (add-hook 'csharp-mode-hook
-            (lambda ()
-              (omnisharp-mode 1)
-              (flycheck-mode 1)
-              (eldoc-mode 1)))
-  (bind-keys :map csharp-mode-map
-             ("C-c C-j" . omnisharp-go-to-definition)
-             ("C-c C-8" . pop-tag-mark)
-             ("M-/" . omnisharp-auto-complete)))
+;; (el-get-bundle go-rename)
+;; (use-package go-rename
+;;   :commands go-rename
+;;   :init
+;;   (key-chord-define go-mode-map "gn" 'go-rename))
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)

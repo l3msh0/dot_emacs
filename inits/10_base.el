@@ -18,9 +18,10 @@
 
 (when (memq window-system '(mac ns))
   ;; fonts
-  (create-fontset-from-ascii-font "Migu 1M-20:weight=medium:slant=normal" nil "migu1m")
+  (create-fontset-from-ascii-font "Migu 1M-18:weight=medium:slant=normal" nil "migu1m")
   (set-fontset-font "fontset-migu1m" 'unicode (font-spec :family "Migu 1M" ) nil 'append)
   (add-to-list 'default-frame-alist '(font . "fontset-migu1m"))
+  ;(set-frame-parameter nil 'alpha 93)
   ;; path
   (el-get-bundle! exec-path-from-shell)
   (use-package exec-path-from-shell
