@@ -9,6 +9,13 @@
   :config
   (key-chord-define flycheck-mode-map "bf" 'flycheck-buffer))
 
+;;; dash
+(when (eq 'darwin system-type)
+  (el-get-bundle dash-at-point)
+  (use-package dash-at-point
+    :config
+    (key-chord-define-global "d." 'dash-at-point)))
+
 ;;; smartparens
 (el-get-bundle smartparens)
 (use-package smartparens
