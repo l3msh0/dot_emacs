@@ -82,6 +82,7 @@
  '(twittering-use-native-retweet t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-pairing nil)
  '(web-mode-enable-current-element-highlight t)
  '(web-mode-markup-indent-offset 2)
  '(web-mode-script-padding 2)

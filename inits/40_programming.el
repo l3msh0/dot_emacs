@@ -23,6 +23,8 @@
   (smartparens-global-mode 1)
   (show-smartparens-global-mode 1)
 
+  (sp-pair "<%" "%>")
+
   (sp-local-pair 'minibuffer-inactive-mode "'" nil :actions nil)
   ; html-mode
   (sp-with-modes '(html-mode sgml-mode web-mode)
