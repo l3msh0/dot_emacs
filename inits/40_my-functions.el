@@ -62,14 +62,6 @@
   (setq indent-tabs-mode (not indent-tabs-mode))
   (message "%s" indent-tabs-mode))
 
-
-(defun my/kill-enclosed-object ()
-  (interactive)
-  (save-excursion
-    (destructuring-bind (&key beg end op cl prefix) (sp-beginning-of-sexp)
-      ;; TODO op cl prefixは不要なので消したい
-      (kill-region (1+ beg) (1- end)))))
-
 (defun my/switch-frame-tranparent ()
   (interactive)
   (if (= 100 (frame-parameter nil 'alpha))

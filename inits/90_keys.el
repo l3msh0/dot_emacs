@@ -80,7 +80,6 @@
 (key-chord-define-global "jw" 'double-dired)
 (key-chord-define-global "hr" 'highlight-symbol-query-replace)
 (key-chord-define-global "hm" 'helm-mini)
-(key-chord-define-global "d." 'my/kill-enclosed-object)
 (key-chord-define-global "vm" 'view-mode)
 (key-chord-define-global "gl" 'helm-ls-git-ls)
 (key-chord-define-global "gn" 'git-gutter:next-hunk)
