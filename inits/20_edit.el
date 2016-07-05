@@ -22,7 +22,9 @@
 
 (el-get-bundle ddskk)
 (use-package ddskk
-  :bind ("C-x C-j" . skk-mode))
+  :bind ("C-x C-j" . skk-mode)
+  :config
+  (bind-key* "C-j" 'skk-kakutei))
 
 (el-get-bundle smartrep)
 (use-package smartrep)
