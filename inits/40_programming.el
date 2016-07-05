@@ -89,7 +89,7 @@
 (el-get-bundle web-mode)
 (el-get-bundle emmet-mode)
 (use-package web-mode
-  :mode ("\\.html\\'" . web-mode)
+  :mode ("\\.html\\'" "\\.erb\\'")
   :config
   (bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map)
   (use-package emmet-mode
@@ -191,6 +191,13 @@
 
 (el-get-bundle lispxmp)
 (use-package lispxmp)
+
+;;; Ruby
+(use-package ruby-mode
+  :config
+  (add-hook 'ruby-mode-hook (lambda ()
+                              (interactive)
+                              (flycheck-mode 1))))
 
 ;;; Haml
 
