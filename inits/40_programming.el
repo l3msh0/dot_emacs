@@ -16,6 +16,9 @@
     :config
     (key-chord-define-global "d." 'dash-at-point)))
 
+(el-get-bundle quickrun)
+(use-package quickrun)
+
 ;;; smartparens
 (el-get-bundle smartparens)
 (use-package smartparens
