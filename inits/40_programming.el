@@ -155,13 +155,12 @@
   :mode ("\\.coffee\\'" . coffee-mode))
 
 ;; ;;; Clojure
-;; (setq nrepl-hide-special-buffers t)
-;; (el-get-bundle cider)
-;; (use-package cider
-;;   :config
-;;   (add-hook 'clojure-mode-hook 'cider-mode)
-;;   (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-;;   (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
+(el-get-bundle cider)
+(use-package cider
+  :config
+  (add-hook 'clojure-mode-hook 'cider-mode)
+  (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+  (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
 
 ;;; Golang
 ;; (el-get-bundle go-mode)
