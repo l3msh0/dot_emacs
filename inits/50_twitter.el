@@ -4,7 +4,7 @@
   :config
   (add-hook 'twittering-mode-hook
             (lambda ()
-              (twittering-icon-mode 0)
+              (twittering-icon-mode 1)
               (twittering-toggle-activate-buffer)))
   (fmakunbound 'twittering-update-lambda)
   (fmakunbound 'twittering-jojo-mode)
