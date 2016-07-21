@@ -26,7 +26,7 @@
   (el-get-bundle! exec-path-from-shell)
   (use-package exec-path-from-shell
     :config
-    (let ((envs '("PATH" "GOPATH")))
+    (let ((envs '("LANG" "LC_ALL" "PATH" "GOPATH")))
       (exec-path-from-shell-copy-envs envs))))
 
 ;; variables
