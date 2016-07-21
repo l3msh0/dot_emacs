@@ -3,8 +3,8 @@
   :bind (("C-c a" . org-agenda)
          ("C-c r" . org-capture))
   :config
-  (when (file-exists-p (expand-file-name "~/org"))
-    (setq org-directory (expand-file-name "~/org")))
+  (when (file-exists-p (expand-file-name "~/Google ドライブ/org"))
+    (setq org-directory (expand-file-name "~/Google ドライブ/org")))
 
   ;; Set task name on frame title when clock-in
   (add-hook 'org-clock-in-hook (lambda () (setq frame-title-format  '("*** " org-clock-heading " ***"))))
