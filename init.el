@@ -36,3 +36,4 @@
   ;; hide compilation results
   (let ((win (get-buffer-window "*Compile-Log*")))
     (when win (delete-window win))))
+(put 'downcase-region 'disabled nil)

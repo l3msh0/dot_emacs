@@ -5,7 +5,7 @@
 
 ;;; flycheck
 (el-get-bundle flycheck)
-(use-package flychech
+(use-package flycheck
   :config
   (key-chord-define flycheck-mode-map "bf" 'flycheck-buffer))
 
@@ -83,7 +83,9 @@
 
 ;;; editorconfig
 (el-get-bundle editorconfig)
-(use-package editorconfig)
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
 
 ;;; web-mode
 (el-get-bundle web-mode)
@@ -96,6 +98,11 @@
     :config
     (add-hook 'web-mode-hook 'emmet-mode)
     (bind-key "M-RET" 'emmet-expand-line emmet-mode-keymap)))
+
+;;; scss-mode
+;; (el-get-bundle scss-mode)
+;; (use-package scss-mode
+;;   :mode ("\\.scss\\'"))
 
 ;;; yasnippet
 (el-get-bundle yasnippet)
@@ -163,24 +170,24 @@
   (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode))
 
 ;;; Golang
-;; (el-get-bundle go-mode)
-;; (use-package go-mode
-;;   :mode ("\\.go\\'" . go-mode)
-;;   :init
-;;   (add-hook 'go-mode-hook 'flycheck-mode)
-;;   (add-hook 'go-mode-hook (lambda () (interactive)
-;;                             (setq ac-sources '(ac-source-go ac-source-yasnippet))))
-;;   (add-hook 'before-save-hook (lambda () (interactive)
-;;                                 (when (eq major-mode 'go-mode) (gofmt)))))
+(el-get-bundle go-mode)
+(use-package go-mode
+  :mode ("\\.go\\'" . go-mode)
+  :init
+  (add-hook 'go-mode-hook 'flycheck-mode)
+  (add-hook 'go-mode-hook (lambda () (interactive)
+                            (setq ac-sources '(ac-source-go ac-source-yasnippet))))
+  (add-hook 'before-save-hook (lambda () (interactive)
+                                (when (eq major-mode 'go-mode) (gofmt)))))
 
-;; (el-get-bundle go-autocomplete)
-;; (use-package go-autocomplete)
+(el-get-bundle go-autocomplete)
+(use-package go-autocomplete)
 
-;; (el-get-bundle go-eldoc)
-;; (use-package go-eldoc
-;;   :commands go-eldoc-setup
-;;   :init
-;;   (add-hook 'go-mode-hook 'go-eldoc-setup))
+(el-get-bundle go-eldoc)
+(use-package go-eldoc
+  :commands go-eldoc-setup
+  :init
+  (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 ;; (el-get-bundle go-rename)
 ;; (use-package go-rename

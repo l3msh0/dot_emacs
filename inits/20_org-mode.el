@@ -12,4 +12,5 @@
   (add-hook 'org-mode-hook 'org-indent-mode)
 
   (key-chord-define org-mode-map "sl" 'org-store-link)
-  (key-chord-define org-mode-map "cg" 'org-clock-goto))
+  (key-chord-define org-mode-map "cg" 'org-clock-goto)
+  (auto-fill-mode 0))

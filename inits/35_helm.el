@@ -38,10 +38,7 @@
   (key-chord-define-global "jr" 'helm-gtags-find-rtag)
   (key-chord-define-global "js" 'helm-gtags-select))
 
-(el-get-bundle helm-migemo)
-(use-package helm-migemo)
-
-(el-get-bundle ace-isearch)
-(use-package ace-isearch
+(el-get-bundle helm-swoop)
+(use-package helm-swoop
   :config
-  (global-ace-isearch-mode 1))
+  (key-chord-define-global "wh" 'helm-swoop))

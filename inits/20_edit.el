@@ -1,4 +1,4 @@
-(el-get-bundle undo-tree)
+(el-get-bundle elpa:undo-tree)
 (use-package undo-tree
   :config
   (global-undo-tree-mode 1))

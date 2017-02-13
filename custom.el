@@ -14,6 +14,7 @@
  '(c-basic-offset 4)
  '(case-fold-search t)
  '(coffee-tab-width 2)
+ '(css-indent-offset 2)
  '(cua-enable-cua-keys nil)
  '(custom-safe-themes
    (quote
@@ -30,6 +31,7 @@
  '(eshell-prompt-regexp "^[^#$n]*[#>] ")
  '(eshell-scroll-show-maximum-output nil)
  '(flycheck-completion-system (quote ido))
+ '(flycheck-phpcs-standard "/Users/l3msh0/repos/walti-wp-plugin/ruleset.xml")
  '(flycheck-phpmd-rulesets (quote ("codesize" "design" "naming" "unusedcode")))
  '(helm-completing-read-handlers-alist
    (quote
@@ -49,11 +51,13 @@
      (tmm-menubar)
      (helm-ag))))
  '(helm-img-thumbnail-height 200)
+ '(helm-migemo-mode t)
  '(highlight-symbol-idle-delay 0.7)
  '(highlight-symbol-on-navigation-p t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ '(js-indent-level 2)
  '(linum-format "%4d")
  '(magit-branch-arguments (quote ("--no-track")))
  '(magit-push-always-verify nil)
@@ -69,7 +73,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
- '(package-selected-packages (quote (queue noctilux-theme)))
+ '(package-selected-packages (quote (undo-tree queue noctilux-theme)))
  '(ruby-insert-encoding-magic-comment nil)
  '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
@@ -97,4 +101,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-level-4 ((t (:inherit outline-4 :foreground "#666699" :weight extra-bold)))))

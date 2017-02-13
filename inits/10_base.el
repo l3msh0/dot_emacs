@@ -7,7 +7,6 @@
 (set-default-coding-systems 'utf-8)
 (prefer-coding-system 'utf-8)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Font & Theme
@@ -21,7 +20,7 @@
   (create-fontset-from-ascii-font "Migu 1M-18:weight=medium:slant=normal" nil "migu1m")
   (set-fontset-font "fontset-migu1m" 'unicode (font-spec :family "Migu 1M" ) nil 'append)
   (add-to-list 'default-frame-alist '(font . "fontset-migu1m"))
-  ;(set-frame-parameter nil 'alpha 93)
+  (set-frame-parameter nil 'alpha 98)
   ;; path
   (el-get-bundle! exec-path-from-shell)
   (use-package exec-path-from-shell
