@@ -89,6 +89,7 @@
 (key-chord-define-global "jw" 'ace-jump-word-mode)
 (key-chord-define-global "jc" 'ace-jump-char-mode)
 (key-chord-define-global "jk" 'ace-jump-line-mode)
+(key-chord-define-global "jb" 'ace-jump-mode-pop-mark)
 
 (key-chord-define-global "rb" (lambda () (interactive) (revert-buffer-with-coding-system 'utf-8)))
 

@@ -49,3 +49,7 @@
   ;; Remember to place symbolic link!!
   (setq migemo-dictionary (concat user-emacs-directory "migemo/utf-8/migemo-dict"))
   (migemo-init))
+
+(el-get-bundle ace-jump-mode)
+(use-package ace-jump-mode
+  :commands (ace-jump-mode ace-jump-word-mode ace-jump-char-mode ace-jump-line-mode))

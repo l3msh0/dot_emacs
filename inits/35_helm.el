@@ -42,3 +42,8 @@
 (use-package helm-swoop
   :config
   (key-chord-define-global "wh" 'helm-swoop))
+
+(el-get-bundle ace-isearch)
+(use-package ace-isearch
+  :config
+  (global-ace-isearch-mode 1))
