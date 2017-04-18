@@ -92,8 +92,8 @@
 
 (key-chord-define-global "rb" (lambda () (interactive) (revert-buffer-with-coding-system 'utf-8)))
 
-(key-chord-define-global "gs" 'geben-end)
-(key-chord-define-global "gb" 'geben)
+(key-chord-define-global "sl" 'org-store-link)
+(key-chord-define-global "nl" 'org-insert-link)
 
 (key-chord-define-global "mx" 'helm-M-x)
 (key-chord-define-global "sm" 'popwin:messages)
