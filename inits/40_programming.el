@@ -204,6 +204,11 @@
   (add-hook 'ruby-mode-hook (lambda ()
                               (interactive)
                               (flycheck-mode 1))))
+(el-get-bundle rspec-mode)
+(use-package rspec-mode
+  :config
+  (eval-after-load 'rspec-mode
+    '(rspec-install-snippets)))
 
 ;;; Haml
 

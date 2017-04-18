@@ -74,6 +74,7 @@
    (quote
     ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
  '(package-selected-packages (quote (undo-tree queue noctilux-theme)))
+ '(rspec-use-vagrant-when-possible t)
  '(ruby-insert-encoding-magic-comment nil)
  '(skk-jisyo-edit-user-accepts-editing t)
  '(tab-width 4)
