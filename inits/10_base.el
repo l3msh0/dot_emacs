@@ -29,6 +29,7 @@
       (exec-path-from-shell-copy-envs envs))))
 
 ;; variables
+(setq visible-bell t)
 (setq-default indent-line-function 'indent-relative-maybe)
 
 (put 'erase-buffer 'disabled nil)
