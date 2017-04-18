@@ -31,3 +31,6 @@
     (goto-char (point-min))
     (while (search-forward "-+-" nil t) (replace-match "-|-"))
     ))
+
+(el-get-bundle docker-tramp)
+(use-package docker-tramp)
