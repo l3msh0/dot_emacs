@@ -11,7 +11,8 @@
    ("C-x F" . find-function-other-window)
    ("C-+" . text-scale-increase)
    ("C--" . text-scale-decrease)
-   ("C-x y" . my/copy-buffer-file-name)))
+   ("C-x y" . my/copy-buffer-file-name)
+   ("M-*" . pop-tag-mark)))
 
 ;;; global
 
@@ -103,6 +104,7 @@
 (global-set-key (kbd "M-n") 'highlight-symbol-next)
 (global-set-key (kbd "M-p") 'highlight-symbol-prev)
 
+(key-chord-define smartparens-mode-map "rw" 'sp-rewrap-sexp)
 
 ;;; twittering-mode
 (eval-after-load 'twittering-mode

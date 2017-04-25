@@ -15,6 +15,10 @@
  '(case-fold-search t)
  '(coffee-tab-width 2)
  '(css-indent-offset 2)
+ '(ctags-update-command "ripper-tags")
+ '(ctags-update-other-options
+   (quote
+    ("--exclude=*.elc" "--exclude=*.class" "--exclude=.git" "--exclude=.svn" "--exclude=SCCS" "--exclude=RCS" "--exclude=CVS" "--exclude=EIFGEN" "--exclude=vendor" "--tag-relative=no")))
  '(cua-enable-cua-keys nil)
  '(custom-safe-themes
    (quote
@@ -73,7 +77,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)"))))
- '(package-selected-packages (quote (undo-tree queue noctilux-theme)))
+ '(package-selected-packages (quote (ctags-update undo-tree queue noctilux-theme)))
  '(rspec-use-vagrant-when-possible t)
  '(ruby-insert-encoding-magic-comment nil)
  '(skk-jisyo-edit-user-accepts-editing t)

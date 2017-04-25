@@ -39,7 +39,7 @@
 (line-number-mode 1)
 (scroll-bar-mode 0)
 (show-paren-mode 1)
-(setq show-paren-style 'mixed)
+(setq show-paren-style 'parenthesis)
 (global-whitespace-mode 1)
 (display-time-mode 1)
 (auto-fill-mode 0)

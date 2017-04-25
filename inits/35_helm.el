@@ -4,7 +4,8 @@
   :bind (("C-c ?" . helm-descbinds)
          ("C-c i" . helm-imenu)
          ("M-y" . helm-show-kill-ring)
-         ("C-, r" . helm-resume))
+         ("C-, r" . helm-resume)
+         ("M-." . helm-etags-select))
   :config
   (bind-key "C-h" 'delete-backward-char helm-map)
   (key-chord-define-global "bm" 'helm-bookmarks))
@@ -28,15 +29,15 @@
   :config
   (bind-keys* ("M-g ," . helm-ag-pop-stack)))
 
-(el-get-bundle helm-gtags)
-(use-package helm-gtags
-  :bind (("M-." . helm-gtags-dwim)
-         ("M-*" . helm-gtags-pop-stack))
-  :commands (helm-gtags-find-tag helm-gtags-find-rtag helm-gtags-select)
-  :init
-  (key-chord-define-global "jt" 'helm-gtags-find-tag)
-  (key-chord-define-global "jr" 'helm-gtags-find-rtag)
-  (key-chord-define-global "js" 'helm-gtags-select))
+;; (el-get-bundle helm-gtags)
+;; (use-package helm-gtags
+;;   :bind (("M-." . helm-gtags-dwim)
+;;          ("M-*" . helm-gtags-pop-stack))
+;;   :commands (helm-gtags-find-tag helm-gtags-find-rtag helm-gtags-select)
+;;   :init
+;;   (key-chord-define-global "jt" 'helm-gtags-find-tag)
+;;   (key-chord-define-global "jr" 'helm-gtags-find-rtag)
+;;   (key-chord-define-global "js" 'helm-gtags-select))
 
 (el-get-bundle helm-swoop)
 (use-package helm-swoop
